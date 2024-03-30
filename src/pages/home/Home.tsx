@@ -26,7 +26,7 @@ const Home = () => {
   
   return (
     <div>
-      <Navbar onchange={handleChange} focus={focus} onclick={clearSearch} />
+      <Navbar onchange={handleChange} focus={focus} onclick={clearSearch} value={search} />
     </div>
   )
 }

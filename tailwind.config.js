@@ -11,6 +11,9 @@ export default {
         "dark": "#333333"
       },
     },
+    fontFamily: {
+      sans: "Mulish"
+    },
     container: {
       center: true,
       padding: '4px',
