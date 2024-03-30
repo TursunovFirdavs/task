@@ -1,13 +1,22 @@
 import { InputLabel, OutlinedInput } from "@mui/material"
 import { useForm } from 'react-hook-form'
+import { useRegister } from "../../service/mutation/useRegister"
+// import { registerData } from "../../types/types"
+import { useNavigate } from "react-router-dom"
 
 
 const Register = () => {
   const { register, handleSubmit } = useForm()
+  const { mutate } = useRegister()
+  const navigate = useNavigate()
 
   const submit = (data: any) => {
-    console.log(data);
-
+    mutate(data, {
+      onSuccess: () => {
+        navigate('/login')
+      },
+      onError: err => console.log(err) 
+    })
   }
   return (
     <div className="flex items-center justify-center h-[100vh]">

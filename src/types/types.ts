@@ -4,3 +4,10 @@ export interface navbarProps {
     focus: boolean,
     value: string
 }
+
+export interface registerData {
+    name:string,
+    email: string,
+    key: string,
+    secret: string
+}
